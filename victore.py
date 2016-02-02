@@ -8,12 +8,12 @@ import configparser
 import shutil
 import string
 
-print("Reading mullen_cfg.txt for configuration...")
+print("Reading victore_cfg.txt for configuration...")
 
 config = configparser.ConfigParser()
 config.read(os.path.expanduser('victore_cfg.txt'))
 
-Settings = config['Mullen']
+Settings = config['Victore']
 oldDocDir = Settings['newDocDir']
 newDocDir1 = Settings['oldDocDir']
 firstName = Settings['firstName'].capitalize()
