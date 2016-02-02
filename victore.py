@@ -11,8 +11,13 @@ config = configparser.ConfigParser()
 config.read(os.path.expanduser('victore_cfg.txt'))
 
 Settings = config['Victore']
+<<<<<<< HEAD
 newDocDir1 = Settings['newDocDir']
 oldDocDir = Settings['oldDocDir']
+=======
+oldDocDir = Settings['newDocDir']
+newDocDir1 = Settings['oldDocDir']
+>>>>>>> origin/master
 firstName = Settings['firstName'].capitalize()
 lastName = Settings['lastName'].upper()
 className = Settings['className']
