@@ -17,8 +17,7 @@ firstName = Settings['firstName'].capitalize()
 lastName = Settings['lastName'].upper()
 className = Settings['className']
 
-# newDocDir2 = newDocDir1 + firstName + "_" + lastName + "_" + className
-newDocDir2 = firstName + "_" + lastName + "_" + className
+newDocDir2 = newDocDir1 + firstName + "_" + lastName + "_" + className
 
 print ("Creating directory if not already existing.")
 if os.path.isdir(newDocDir2):
@@ -33,22 +32,15 @@ print("Files to be converted are in: " + oldDocDir)
 print("Files after conversion are in: " + newDocDir2)
 print("Preparing to fix files...")
 
-for dirpath, dirnames, files in os.walk(oldDocDir):
-    print ("dirpath", dirpath)
-    print ("dirnames", dirnames)
-    print("files", files)
-    for name in files:
-        print(os.path.join(dirpath, name))
-        fileName = os.path.join(dirpath, name)
+for fileName in os.listdir(oldDocDir):
+        oldName = oldDocDir + "/" + fileName
+        newName = newDocDir2 + "/"  + lastName + "_" + fileName
 
-        # oldName = oldDocDir + "/" + fileName
-        # newName = newDocDir2 + "/"  + lastName + "_" + fileName
-        newName = fileName.replace("Harris", newDocDir2)
-        print(fileName + " -> " + newName)
+        print(oldName + " -> " + newName)
         try:
-            shutil.copytree(fileName, newName)
+            shutil.copytree(oldName, newName)
         except OSError as exc:
             if exc.errno == errno.ENOTDIR:
-                shutil.copy(fileName, newName)
+                shutil.copy(oldName, newName)
         else: raise
-	
+		
