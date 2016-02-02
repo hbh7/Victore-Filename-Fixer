@@ -1,15 +1,7 @@
 [Victore]
-<<<<<<< HEAD
 newDocDir = E:\School\2015-2016\Design for 3D Printing\Hunter_HARRIS_3D_Design_2016
 oldDocDir = E:\School\2015-2016\Design for 3D Printing\Harris
 firstName = Hunter
 lastName = Harris
 className = 3D_Design_2016
 classDirName = Hunter_HARRIS_3D_Design_2016
-=======
-newDocDir = E:/School/2015-2016/Design for 3D Printing/Harris
-oldDocDir = E:/School/2015-2016/Design for 3D Printing/
-firstName = Hunter
-lastName = Harris
-className = 3D_Design_2016
->>>>>>> origin/master
